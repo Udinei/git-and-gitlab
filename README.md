@@ -15,6 +15,6 @@ Cada cópia do repositório contém o histórico completo de todas as alteraçõ
 - Open Source
 
 # GIT
-- repositório remote -> repositorio local
-- 
+Repositório remote e repositorio local
 
+![](/git-remote.png)
