@@ -19,7 +19,9 @@ Repositório remoto e repositorio local
 
 ![](/git-remote.png)
 
-## Feature branch
+# Feature branch
 ![](/feature-branch.jpg)
 
 
+# Fluxo de trabalho
+![](/lifecycle-git.png)
