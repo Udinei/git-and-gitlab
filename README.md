@@ -20,4 +20,6 @@ Repositório remoto e repositorio local
 ![](/git-remote.png)
 
 ## Feature branch
+![](/feature-branch.jpg)
+
 
