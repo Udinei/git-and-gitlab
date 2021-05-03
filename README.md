@@ -15,6 +15,9 @@ Cada cópia do repositório contém o histórico completo de todas as alteraçõ
 - Open Source
 
 # GIT
-Repositório remote e repositorio local
+Repositório remoto e repositorio local
 
 ![](/git-remote.png)
+
+## Feature branch
+
