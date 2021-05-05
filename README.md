@@ -1,5 +1,5 @@
 # git-and-gitlab
-Trabalhando com Git e GitLab na prática usando o IntelliJ. As principais funcionalidades, e como trabalhar com o Git e GitLab no dia a dia. 
+Esse projeto descreve o uso do fluxo git flow. Trabalhando com Git e GitLab na prática usando o IntelliJ e as principais funcionalidades e os comandos mais utilizados durante o uso desse fluxo com o Git e GitLab no dia a dia. 
 
 # VCS - Version Control System
 Controle de versões diferentes de um documento.
@@ -82,13 +82,31 @@ cria um novo commit na branch
 merge - main > feature2
 
 # GitLab
-Gerenciamento de repósitorios
-Similar ao GitHub e Bitbucket
-Open Source
-Organização de repósitorio em grupos
-CI/CD
+- Gerenciamento de repósitorios
+- Similar ao GitHub e Bitbucket
+- Open Source
+- Organização de repósitorio em grupos
+- suporta CI/CD
 
-Mudar para a branch feature2
+### Criando uma conta no GitLab
+- Acessar o site do GitLab em https://gitlab.com/
+- Criar seu usuario no GitLab
+- Criar um o grupo "DIO-GIT_AND_LAB"
+- Criar o projeto sitema-vendas
+
+Como o repositorio git já foi criando localmente usa a opção `Push an existing Git repository`
+~~~
+cd existing_repo
+git remote rename origin old-origin
+git remote add origin git@gitlab.com:dio-git_and_lab/sistema-vendas.git
+git push -u origin --all
+git push -u origin --tags
+~~~
+### Como usar a mesma chave SSH do git no GitLab
+ Se você tem já tem um par de chaves SSH existente, você não precisa criar uma nova (a menos que queira) você pode utilizar a essa mesma chave SSH do Git no GitLab.
+[Consulte esse link para saber mais sobre esse assunto](https://docs.gitlab.com/ee/ssh/README.html#see-if-you-have-an-existing-ssh-key-pair)
+
+### Mudar para a branch feature2
 git checkout feature2
 
 git merge master(main)
