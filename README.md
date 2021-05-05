@@ -117,6 +117,18 @@ como na imagem abaixo:
  Se você tem já tem um par de chaves SSH existente, você não precisa criar uma nova (a menos que queira) você pode utilizar a essa mesma chave SSH do Git no GitLab.
 [Consulte esse link para saber mais sobre esse assunto](https://docs.gitlab.com/ee/ssh/README.html#see-if-you-have-an-existing-ssh-key-pair)
 
+# Atualizando as informações
+Traz as referência de "origin/main" (uma cópia da branch "main" do repositório remoto) para o repositório local.
+`git fetch` 
+[Mais detalhes sobre o comando fetch](https://metring.com.br/para-que-serve-o-git-fetch-vs-pull)
+
+Atualiza o repositório remoto com informações do repositório local
+`git push -u origin --all` - as opções `-u origin --all` podem ser executadas somente da primeira vez, que fizer o push
+
+# Fazendo um Merge request entre as branches
+
+
+
 ### Mudar para a branch feature2
 git checkout feature2
 
