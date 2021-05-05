@@ -103,10 +103,14 @@ git push -u origin --all
 git push -u origin --tags
 ~~~
 ### Conectando o repositorio local ao repositorio remoto
-No IntelliJ - No menu "Git" usar a opção "Manage Remotes..."
+No IntelliJ - No menu "Git" 
 ![](/images/menu-git-intellij.png)
-e informar somente o endereço do repositorio "git@gitlab.com:dio-git_and_lab/sistema-vendas.git"
 
+usar a opção "Manage Remotes..."
+e informar somente o endereço do repositorio "git@gitlab.com:dio-git_and_lab/sistema-vendas.git"
+como na imagem abaixo:
+
+![](/images/conect-remote-gitlab.png)
 
 
 ### Como usar a mesma chave SSH do git no GitLab
