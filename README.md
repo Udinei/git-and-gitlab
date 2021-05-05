@@ -1,5 +1,5 @@
 # git-and-gitlab
-Esse projeto descreve o uso do fluxo git flow. Trabalhando com Git e GitLab na prática usando o IntelliJ e as principais funcionalidades e os comandos mais utilizados durante o uso desse fluxo com o Git e GitLab no dia a dia. 
+Esse projeto descreve o uso do [feature brach workflow](https://docs.gitlab.com/ee/gitlab-basics/feature_branch_workflow.html) no GitLab na prática usando o IntelliJ e o terminal, as principais funcionalidades e os comandos mais utilizados durante o uso desse fluxo com o Git e GitLab no dia a dia. 
 
 # VCS - Version Control System
 Controle de versões diferentes de um documento.
@@ -125,7 +125,14 @@ Traz as referência de "origin/main" (uma cópia da branch "main" do repositóri
 Atualiza o repositório remoto com informações do repositório local
 `git push -u origin --all` - as opções `-u origin --all` podem ser executadas somente da primeira vez, que fizer o push
 
-# Fazendo um Merge request entre as branches
+# Integrando branchs com Merge request no GitLab
+Atualizando a branch main com dados de feature2
+
+
+
+### Merge Request 
+
+
 
 
 
