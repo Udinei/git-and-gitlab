@@ -94,7 +94,7 @@ merge - main > feature2
 - Criar um o grupo "DIO-GIT_AND_LAB"
 - Criar o projeto sitema-vendas
 
-Como o repositorio git já foi criando localmente usa a opção `Push an existing Git repository`
+Como o repositório git já foi criado localmente usar a opção `Push an existing Git repository` sugerida pelo GitLab logo após a criação do projeto.
 ~~~
 cd existing_repo
 git remote rename origin old-origin
@@ -102,6 +102,13 @@ git remote add origin git@gitlab.com:dio-git_and_lab/sistema-vendas.git
 git push -u origin --all
 git push -u origin --tags
 ~~~
+### Conectando o repositorio local ao repositorio remoto
+No IntelliJ - No menu "Git" usar a opção "Manage Remotes..."
+![](/images/menu-git-intellij.png)
+e informar somente o endereço do repositorio "git@gitlab.com:dio-git_and_lab/sistema-vendas.git"
+
+
+
 ### Como usar a mesma chave SSH do git no GitLab
  Se você tem já tem um par de chaves SSH existente, você não precisa criar uma nova (a menos que queira) você pode utilizar a essa mesma chave SSH do Git no GitLab.
 [Consulte esse link para saber mais sobre esse assunto](https://docs.gitlab.com/ee/ssh/README.html#see-if-you-have-an-existing-ssh-key-pair)
