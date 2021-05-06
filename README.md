@@ -1,5 +1,6 @@
 # git-and-gitlab
-Esse projeto descreve o uso do [feature brach workflow](https://docs.gitlab.com/ee/gitlab-basics/feature_branch_workflow.html) no GitLab na prática usando o IntelliJ e o terminal, as principais funcionalidades e os comandos mais utilizados durante o uso desse fluxo com o Git e GitLab no dia a dia. 
+Esse projeto descreve o uso do [feature brach workflow](https://docs.gitlab.com/ee/gitlab-basics/feature_branch_workflow.html) no GitLab na prática usando o IntelliJ e o terminal, e uso de uma pipeline aplicação do CI (integração continua) descrita em arquivo .yml para compilar, testar e publicar ao fazer merge request com a `main` e
+as funcionalidades e comandos mais utilizados durante o uso desse fluxo com o Git e GitLab no dia a dia. 
 
 # VCS - Version Control System
 Controle de versões diferentes de um documento.
@@ -37,11 +38,15 @@ Identificando o usuario no repositorio local
 `git config user.nome "ukaliko"´` 
 `git config user.email "ukaliko@gmail.com"`
 
-### Arquivo .gitignore
+# Arquivo .gitignore
 Armazena informações de padrão de arquivos e pastas que não serão versionadas
 - Formato expressões regulares
 
-### Status  do repositório
+### Arquivo no .gitignore
+Para evitar que um arquivo continue aparencendo na lista de arquivos versionados mesmo estando no .gitgnore.
+usar `git rm --cached *.log` ou `git update-index --assume-unchanged *.log`
+
+### Status do repositório
 git status
 
 ### git commit
