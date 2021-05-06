@@ -35,7 +35,7 @@ Controle de versões diferentes de um documento.
 - GitHub não é Open Source
 - Otimizado para o desempenho
 
-# Fluxo básico de trabalho do Git
+# Fluxo entre repositórios Remote/Local do Git
 Repositório remoto e repositório local (GitLab segue a mesma ideia)
 
 ![](/images/fluxo-basic-git.png)
