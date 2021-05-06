@@ -1,6 +1,6 @@
 # git-and-gitlab 
 <b>[em construção]</b>
-Esse projeto descreve o uso do [feature brach workflow](https://martinfowler.com/bliki/FeatureBranch.html) no GitLab na prática usando o Git no IntelliJ e no terminal, o uso de uma pipeline de CI (integração continua) descrita em arquivo .yml para compilar, testar e publicar ao fazer merge request com a branch `main` e
+Esse projeto descreve o uso do [feature brach workflow](https://martinfowler.com/bliki/FeatureBranch.html) no GitLab na prática usando o Git no IntelliJ e no terminal, o uso de uma pipeline de CI (integração continua) descrita em arquivo `.yml` para compilar, testar e publicar ao fazer `merge request` com a branch `main` e
 as funcionalidades e comandos mais utilizados durante o uso desse fluxo com o Git e GitLab no dia a dia. 
 
 # Feature branch workflow
