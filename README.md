@@ -1,6 +1,9 @@
 # git-and-gitlab
-Esse projeto descreve o uso do [feature brach workflow](https://docs.gitlab.com/ee/gitlab-basics/feature_branch_workflow.html) no GitLab na prática usando o IntelliJ e o terminal, e uso de uma pipeline aplicação do CI (integração continua) descrita em arquivo .yml para compilar, testar e publicar ao fazer merge request com a `main` e
+Esse projeto descreve o uso do [feature brach workflow](https://martinfowler.com/bliki/FeatureBranch.html) no GitLab na prática usando o IntelliJ e o terminal, e uso de uma pipeline aplicação do CI (integração continua) descrita em arquivo .yml para compilar, testar e publicar ao fazer merge request com a `main` e
 as funcionalidades e comandos mais utilizados durante o uso desse fluxo com o Git e GitLab no dia a dia. 
+
+# Feature branch workflow
+`Feature branch workflow` é um padrão de ramificação de código-fonte em que um desenvolvedor abre um branch quando começa a trabalhar em um novo recurso. Ela faz todo o trabalho neste branch e integra as mudanças com o resto da equipe quando o recurso é concluído
 
 # VCS - Version Control System
 Controle de versões diferentes de um documento.
@@ -172,5 +175,5 @@ Traz o conteúdo da `main` para a branch `feature2`
 # Referências
 [PDF com os comando do Git](https://about.gitlab.com/images/press/git-cheat-sheet.pdf)
 [Comparando Workflows Git]https://www.atlassian.com/git/tutorials/comparing-workflows
-
+[feature brach workflow](https://docs.gitlab.com/ee/gitlab-basics/feature_branch_workflow.html)
 
