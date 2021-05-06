@@ -128,7 +128,22 @@ Atualiza o repositório remoto com informações do repositório local
 # Integrando branchs com Merge request no GitLab
 Atualizando a branch main com dados de feature2
 
+### Habilitando no Intellij a aba Local change
+Na aba local change é possivel visualizar todas as modificações feitas na brach (como um git status)
 
+Settings -> Version Control -> Commit -> Use non-modal commit interface (deselecionar essa opção)
+
+### Adicionando o arquivo ao controle de versão usando o intellij
+Na aba Local Change clicar no arquivo criado com o botão direito e selecionar Add to VCS (equivalente ao `git add`) 
+
+### commit Git no intelliJ
+clicar na aba `Local change do Git` com o botão direito e selecionar `Commit Files...`
+
+### para remover um branch remoto ou local
+[Consultar esse link](https://receitasdecodigo.com.br/devops/git-remover-um-branch-local-ou-remoto)
+
+### Desfazer um commit no intellij
+Na aba Git clicar no commit e selecionar a opção `Undo commit...`
 
 ### Merge Request 
 
