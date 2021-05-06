@@ -36,11 +36,11 @@ Repositório remoto e repositório local (GitLab segue a mesma ideia)
 `git init` Cria um repositorio git (pasta .git)
 
 ### Git config
-Usuário pode ser local ou global - opção --global
+Usuário pode ser local ou global --global
 
-Identificando o usuario no repositorio local
-`git config user.nome "ukaliko"´` 
-`git config user.email "ukaliko@gmail.com"`
+Identificando o usuario no repositório local
+- `git config user.nome "ukaliko"` 
+- `git config user.email "ukaliko@gmail.com"`
 
 # Arquivo .gitignore
 Armazena informações de padrão de arquivos e pastas que não serão versionados
@@ -50,7 +50,7 @@ Armazena informações de padrão de arquivos e pastas que não serão versionad
 Para evitar que um arquivo continue aparencendo na lista de arquivos versionados mesmo estando no .gitgnore.
 usar `git rm --cached *.log` ou `git update-index --assume-unchanged *.log`
 
-### Status do repositório Git
+### Visualizando Status do repositório local
 `git status` 
 
 ### Versionar as alterações feitas 
@@ -59,32 +59,39 @@ usar `git rm --cached *.log` ou `git update-index --assume-unchanged *.log`
 ### Ver os logs dos commit no Git
 `git log`
 
-### Git config
+### Git Alias
 Visualizando configurações do git (atalhos para comandos git)
 
 `git config -l | grep alias`
 
 `git config -l | grep core`
 
-### Git acm (verificar alias)
+### Git acm (necessário ter criado o alias)
 Esse comando adiciona e faz o comit de uma vez só (Comando não encontrado non config do git)
 
 `git acm "msg aqui"`
 
-### Criando uma nova branch
-Cria a branch e a seta como a default
+### Git checkout
+Cria uma nova branch com o conteudo da branch atual e a ajusta como a branch default (HEAD)
+`git checkout -b nome-branch`
+
 `git checkout -b feature1`
 
+[Saiba mais lendo esse artigo](https://bluecast.tech/blog/git-switch-branch/)
 ### Mudando de branch
 `git switch main`
 
 Troca de branch criando a branch feature2 -c (cria a branch)
-git switch -c feature2
+
+`git switch -c feature2`
 
 ### Visualizando a arvore de commit do git
-git log --graph --oneline --all
+`git log --graph --oneline --all`
+
 ou
-git log --graph --abbrev-commit --decorate --format=format:'%C(yellow)%h%C(reset)%C(auto)%d%C(reset) %C(normal)%s%C(reset) %C(dim white)%an%C(reset) %C(dim blue)(%ar)%C (reset)' --all
+
+`
+git log --graph --abbrev-commit --decorate --format=format:'%C(yellow)%h%C(reset)%C(auto)%d%C(reset) %C(normal)%s%C(reset) %C(dim white)%an%C(reset) %C(dim blue)(%ar)%C (reset)' --all`
 
 # Atualizando branchs
 
