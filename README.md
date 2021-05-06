@@ -42,14 +42,17 @@ Repositório remoto e repositório local (GitLab segue a mesma ideia)
 
 
 # Feature branch
-O Git segue o conceito de branche sendo o branch(ramos, ramificações) `main` e o branch principal do repositório, onde todo o código é juntado em uma só branch
+O Git segue o conceito de branch sendo o branch(ramos, ramificações) `main` o branch principal do repositório, onde todo o código feitos em outras branch é juntado, formando assim um só código (no caso do software).
 
 ![](/images/git-branchs.png)
 
 
-# Fluxo de trabalho
+# Fluxo de trabalho local do Git
+Todos os documentos (arquivos) na área de trabalho, seguem o fluxo abaixo quando estão sendo monitorados pelo
+sistema de versão do Git.
 ![](/lifecycle-git.png)
 
+Fluxo de trabalho local
 # Uso do git
 O Git pode ser utilizado através de um terminal Linux, Windows (cmd ou gitbash) ou com uso de uma IDE no nosso caso IntelliJ
 
