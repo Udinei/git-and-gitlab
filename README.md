@@ -8,8 +8,8 @@ Projeto da [Live Encoding do Osnir Cunha (Inter)](https://www.youtube.com/watch?
 - Maven
 - IDE Intellij
 - Junit
-- Git 
-- GitLab
+- Git Bash (Windows)
+- Conta no GitLab
  
 # Assuntos abordados
 - Comandos Git mais utilizados durante o versionamento de um documento usando Git e GitLab no dia a dia. 
@@ -51,6 +51,7 @@ O Git segue o conceito de branch sendo o branch(ramos, ramificações) `main` o 
 Todos os documentos (arquivos) na área de trabalho, seguem o fluxo abaixo quando estão sendo monitorados pelo
 sistema de versão do Git.
 ![](/lifecycle-git.png)
+
 
 Fluxo de trabalho local
 # Uso do git
@@ -201,15 +202,20 @@ ou ainda `git checkout` que também muda de branch
 `git checkout nomeBranch`
 
 # Atualizando branchs
+O comando merge e rebase são responsaveis por atualizar as branch, sendo necessario estar na branch que deseja atualizar
+e então executar um desses comandos, que possuem suas particularidades.
 
 ### git merge
-`merge` da `master` para a `feature2` que vai atualizar a branch feature2, com os novos commits feitos na branch main, 
-o comando `merge` cria um novo commit ("G") na branch feature2
+`git merge main`
+
+O comando acima, e um `merge` da `master` para a `feature2` vai atualizar a branch `feature2` com os novos commits feitos na branch `main` e criando na branch `feature2` um novo commit ("G") como na imagem abaixo
 ![](/merge-feature2.png)
 
 
 ### git rebase
-`rebase` da `master` para a `feature1` Atualiza a branch feature1, com os novos commits feitos na branch(main), refazendo a linha base ou seja reescrevendo a árvore de commits da `master` para `feature1` que agora fica de forma linear e limpa.
+`git rebase main`
+
+O comando acima, é um comando `rebase` da `master` para a `feature1` atualiza a branch `feature1`, com os novos commits feitos na branch(main), refazendo a linha base ou seja reescrevendo a árvore de commits da `master` para `feature1` que agora possui o conteúdo da `main` mas não é criado um novo commit, ficando assim de forma linear e limpa sua árvore de commits.
 ![](/rebase-feature1.png)
 
 # GitLab
