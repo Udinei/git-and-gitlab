@@ -35,13 +35,16 @@ Controle de versões diferentes de um documento.
 - GitHub não é Open Source
 - Otimizado para o desempenho
 
+# Fluxo básico de trabalho do Git
 Repositório remoto e repositório local (GitLab segue a mesma ideia)
 
 ![](/images/fluxo-basic-git.png)
 
 
 # Feature branch
-![](/feature-branch.jpg)
+O Git segue o conceito de branche sendo o branch(ramos, ramificações) `main` e o branch principal do repositório, onde todo o código é juntado em uma só branch
+
+![](/images/git-branchs.png)
 
 
 # Fluxo de trabalho
