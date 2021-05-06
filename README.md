@@ -3,7 +3,18 @@
 Projeto da [Live Encoding do Osnir Cunha (Inter)](https://www.youtube.com/watch?v=vczVA6pUIpc) que descreve o uso do [feature brach workflow](https://martinfowler.com/bliki/FeatureBranch.html) no GitLab na prática usando o Git no IntelliJ e no terminal, o uso de uma pipeline de CI (integração continua) descrita em arquivo `.yml` para compilar, testar e publicar ao fazer `merge request` com a branch `main` e
 as funcionalidades e comandos mais utilizados durante o uso desse fluxo com o Git e GitLab no dia a dia. 
 
-# Feature branch workflow
+# Stack
+
+- Java 15
+- Spring boot
+- Maven
+- Intellij
+- Junit
+- Git 
+- GitLab
+ 
+
+# O que é Feature branch workflow
 `Feature branch workflow` segundo [Martin Fowler](https://martinfowler.com/bliki/FeatureBranch.html) esse é um padrão de ramificação de código-fonte em que um desenvolvedor abre um branch quando começa a trabalhar em um novo recurso, faz todo o trabalho neste branch e integra as mudanças em um branch (main) quando o recurso é concluído.
 
 # VCS - Version Control System
@@ -72,16 +83,20 @@ Esse comando adiciona e faz o comit de uma vez só (Comando não encontrado non 
 `git acm "msg aqui"`
 
 ### Git checkout
-Cria uma nova branch com o conteudo da branch atual e a ajusta como a branch default (HEAD)
-`git checkout -b nome-branch`
+`git checkout` alterna entre versões de código já existentes no sistema local, usa o `hash do commit` para navegar
+entre as versões do código, usuar o comando `git log` para obter o hash do commit
+`git checkout 135deecb687f4d0fe5dcfc26e3f6c75f3167319e` 
 
+ou cria uma nova branch com a opção `-b` ex:
 `git checkout -b feature1`
 
-[Saiba mais lendo esse artigo](https://bluecast.tech/blog/git-switch-branch/)
+- [Git checkout](https://www.atlassian.com/br/git/tutorials/using-branches/git-checkout)
+- [Saiba mais lendo esse artigo](https://bluecast.tech/blog/git-switch-branch/)
+
 ### Mudando de branch
 `git switch main`
 
-Troca de branch criando a branch feature2 -c (cria a branch)
+ou troca de branch criando a branch feature2 -c (cria a branch)
 
 `git switch -c feature2`
 
@@ -159,31 +174,35 @@ Settings -> Version Control -> Commit -> Use non-modal commit interface (deselec
 ### Adicionando o arquivo ao controle de versão usando o intellij
 Na aba Local Change clicar no arquivo criado com o botão direito e selecionar Add to VCS (equivalente ao `git add`) 
 
-### commit Git no intelliJ
+### Commit Git no intelliJ
 clicar na aba `Local change do Git` com o botão direito e selecionar `Commit Files...`
 
-### para remover um branch remoto ou local
+### Para remover um branch remoto ou local
 [Consultar esse link](https://receitasdecodigo.com.br/devops/git-remover-um-branch-local-ou-remoto)
 
 ### Desfazer um commit no intellij
 Na aba Git clicar no commit e selecionar a opção `Undo commit...`
 
 ### Merge Request 
-Solicitação feita pelo desenvolvedor, no gitLab ao um responsável pela organização e distribuição do código, onde o mesmo
+Solicitação feita pelo desenvolvedor, dentro do GitLab ao um responsável pela organização e distribuição do código, onde o mesmo
 vai rodar pode rodar pipeline de testes, deploy e build. 
-
 
 ### Mudar de branch
 `git checkout feature2`
 
 Traz o conteúdo da `main` para a branch `feature2`
 
-### git Rebase 
-- Reescreve a arvore de commit da branch features, movendo a ligação para o ultimo commit da main
-- Mantém a estrura de commit limpa, usar sempre se ainda não fez nenhum commit para o main `rebase master > feature`
+### Atualizando branch com rebase 
+Comando que atualiza a branch atual com os dados vindos da main, reescrevendo a árvore de commit
+`git rebase master feature`
+- Reescreve a árvore local, não cria um novo commit, apenas atualiza os dados local com os dados vindos da `main`
+- Mantém a estrura de commit limpa, usar sempre que ainda não fez nenhum commit para o main
+
+### Agrupando commits com squash
 
 # Referências
-- [Live conding Osnir Cunha da Inter](https://www.youtube.com/watch?v=vczVA6pUIpc)
+- [Live conding Osnir Cunha](https://www.youtube.com/watch?v=vczVA6pUIpc)
+- [Linkdin Osnir Cunha](https://linkdin.com/in/osnircunha)
 - [PDF com os comando do Git](https://about.gitlab.com/images/press/git-cheat-sheet.pdf)
 - [Comparando Workflows Git](https://www.atlassian.com/git/tutorials/comparing-workflows)
 - [feature brach workflow](https://docs.gitlab.com/ee/gitlab-basics/feature_branch_workflow.html)
