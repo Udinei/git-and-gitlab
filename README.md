@@ -169,8 +169,8 @@ se o comando não for encontrado no config do git, será necessário cria-lo ant
 
 # Criando Branchs
 ### Criando uma novo branch chamada feature1 com a opção `-b` ex:
-`git checkout -b feature1`
 
+`git checkout -b feature1`
 
 ### Alternando entre commits 
 o comando `git checkout nomeBranch` alterna entre versões de código já commitados no sistema local, usa o `hash do commit` para navegar entre as versões do código, usar o comando `git log` para obter o hash do commit ex: 
@@ -208,15 +208,30 @@ e então executar um desses comandos, que possuem suas particularidades.
 ### git merge
 `git merge main`
 
-O comando acima, e um `merge` da `master` para a `feature2` vai atualizar a branch `feature2` com os novos commits feitos na branch `main` e criando na branch `feature2` um novo commit ("G") como na imagem abaixo
+O comando acima, e o  `merge` da `master` para a `feature2` vai atualizar a branch `feature2` com os novos commits feitos na branch `main` e criando na branch `feature2` um novo commit ("G") como na imagem abaixo
 ![](/merge-feature2.png)
 
 
 ### git rebase
 `git rebase main`
 
-O comando acima, é um comando `rebase` da `master` para a `feature1` atualiza a branch `feature1`, com os novos commits feitos na branch(main), refazendo a linha base ou seja reescrevendo a árvore de commits da `master` para `feature1` que agora possui o conteúdo da `main` mas não é criado um novo commit, ficando assim de forma linear e limpa sua árvore de commits.
+O comando acima, é o comando `rebase` da `master` para a `feature1` que atualiza a branch `feature1`, com os novos commits feitos na branch `main`, refazendo a linha base ou seja reescrevendo a árvore de commits da `master` para `feature1` e não cria nenhum novo commit na branch `feature1`, ficando assim de forma linear e limpa a árvore de commits da branch `feature1`.
+Esse comando deve ser usado se a branch `feature1` ainda não foi comitada na `main` caso contrário o melhor é usar o `merge`
 ![](/rebase-feature1.png)
+
+# Removendo branchs
+### Local
+Para remover um branch `local` use o comando abaixo:
+
+`git branch -d feature3`
+
+### Remoto
+Para remover um branch `remoto` use o comando abaixo:
+
+`git push origin --delete feature3`
+
+[Leia mais sobre o comando delete branch nesse link](https://receitasdecodigo.com.br/devops/git-remover-um-branch-local-ou-remoto)
+
 
 # GitLab
 - Gerenciamento de repósitorios
@@ -276,8 +291,6 @@ Na aba Local Change clicar no arquivo criado com o botão direito e selecionar A
 ### Commit Git no intelliJ
 clicar na aba `Local change do Git` com o botão direito e selecionar `Commit Files...`
 
-### Para remover um branch remoto ou local
-[Consultar esse link](https://receitasdecodigo.com.br/devops/git-remover-um-branch-local-ou-remoto)
 
 ### Desfazer um commit no intellij
 Na aba Git clicar no commit e selecionar a opção `Undo commit...`
@@ -286,18 +299,8 @@ Na aba Git clicar no commit e selecionar a opção `Undo commit...`
 Solicitação feita pelo desenvolvedor, dentro do GitLab ao um responsável pela organização e distribuição do código, onde o mesmo
 vai rodar pode rodar pipeline de testes, deploy e build. 
 
-### Mudar de branch
-`git checkout feature2`
-
-Traz o conteúdo da `main` para a branch `feature2`
-
-### Atualizando branch com rebase 
-Comando que atualiza a branch atual com os dados vindos da main, reescrevendo a árvore de commit
-`git rebase master feature`
-- Reescreve a árvore local, não cria um novo commit, apenas atualiza os dados local com os dados vindos da `main`
-- Mantém a estrura de commit limpa, usar sempre que ainda não fez nenhum commit para o main
-
-### Agrupando commits com squash
+### Agrupando commits
+Para agrupar commits utilizar o comando `squash`
 
 # Referências
 - [Live conding Osnir Cunha](https://www.youtube.com/watch?v=vczVA6pUIpc)
