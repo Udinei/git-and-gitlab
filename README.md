@@ -302,6 +302,63 @@ vai rodar pode rodar pipeline de testes, deploy e build.
 ### Agrupando commits
 Para agrupar commits utilizar o comando `squash`
 
+### Usando arquivos .yml para fazer pipeline no GitLab
+Arquivos .YAML usa um padrão de dados hierárquicos, que pode ser usado em conjunto com qualquer linguagens de programação, e é usualmente utilizado para armazenar arquivos de configuração. Nesse caso o conteúdo do arquivo .gitlab-ci.yml abaixo, é lido automaticamente pelo GitLab e executa os comandos nele contido, que é uma sequencia de comandos para compilar, testar e construir toda a aplicação assim que form feito um commit para o repositorio local:
+
+conteúdo do arquivo `.gitlab-ci.yml`
+~~~
+# Esse arquivo adiciona as configurações de pipeline para o CI (Continuos Integrations)
+# passagem de parametros para as Variaveis do Maven
+variables:
+  MAVEN_OPTS: "-Dhttps.protocols=TLSv1.2 -Dmaven.repo.local=$CI_PROJECT_DIR/.m2/repository -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=WARN -Dorg.slf4j.simpleLogger.showDateTime=true -Djava.awt.headless=true"
+  MAVEN_CLI_OPTS: "--batch-mode --errors --fail-at-end --show-version -DinstallAtEnd=true"
+
+# imagem do maven que sera utilizada
+image: maven:3.6.3-jdk-11
+
+# faz cache do repositorio do maven no repositorio
+cache:
+  paths:
+    - .m2/repository
+
+#  A pipeline tera os 3 estagios abaixo
+stages:
+  - compile
+  - test
+  - publish
+
+# 1 stage - compila a app
+compilation:
+  stage: compile
+  script: # empacota app package e pula os tests
+    - mvn $MAVEN_CLI_OPTS package -DskipTests
+
+# 2 stage - faz os testes
+unit-tests:
+  stage: test
+  script:
+    - mvn $MAVEN_CLI_OPTS clean verify
+  artifacts:
+    when: always
+    reports: # sempre salva os relatorios de testes do maven no endereco abaixo
+      junit:
+        - target/surefire-reports/TEST-*.xml
+        - target/failsafe-reports/TEST-*.xml
+
+#  sempre que for feito um merge com a branch main, publica com a geração do .jar
+artifact-publish:
+  stage: publish
+  script:
+    - mvn $MAVEN_CLI_OPTS clean install -DskipTests
+  only: # somente roda esse stage quando o branche que tem o arquivo de CI for integrado com o master
+    refs:
+      - main
+  artifacts:
+    paths: [ "target/*.jar" ]
+    expire_in: 3 days
+
+~~~
+
 # Referências
 - [Live conding Osnir Cunha](https://www.youtube.com/watch?v=vczVA6pUIpc)
 - [Linkdin Osnir Cunha](https://linkdin.com/in/osnircunha)
