@@ -61,18 +61,70 @@ O Git pode ser utilizado através de um terminal Linux, Windows (cmd ou gitbash)
 
 ### Criando um repositorio git na área de trabalho
 A área de trabalho é a pasta no seu computador local, que contém o documentos ou arquivos que deseja versionar
-`git init` Cria um repositorio git (pasta .git)
+O comando abaixo cria o repositorio .git (uma pasta oculta), onde o Git armazena seus metadados de controle
+`git init` 
 
 ### Git config
-Usuário pode ser local ou global --global
+Criando usuário do Git (pode ser local ou global --global)
 
-Identificando o usuario no repositório local
+Identificando o usuário no repositório do Git
 - `git config user.nome "ukaliko"` 
 - `git config user.email "ukaliko@gmail.com"`
 
 # Arquivo .gitignore
 Armazena informações de padrão de arquivos e pastas que não serão versionados
 - Formato expressões regulares
+Abaixo exemplo de arquuivo `.gitignore`
+~~~
+### Java ###
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+### Code-Java ###
+.project
+.classpath
+factoryConfiguration.json
+
+### Java-Web ###
+## ignoring target file
+target/
+out/
+
+# Eclipse
+.classpath
+.project
+.settings/
+# Intellij
+.idea/
+*.iml
+*.iws
+ 
+# Mac
+.DS_Store
+ 
+# Maven
+log/
+target/
+~~~
+
 
 ### Arquivos no .gitignore
 Para evitar que um arquivo continue aparencendo na lista de arquivos versionados mesmo estando no .gitgnore.
