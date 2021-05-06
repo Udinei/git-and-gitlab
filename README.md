@@ -3,7 +3,7 @@ Esse projeto descreve o uso do [feature brach workflow](https://martinfowler.com
 as funcionalidades e comandos mais utilizados durante o uso desse fluxo com o Git e GitLab no dia a dia. 
 
 # Feature branch workflow
-`Feature branch workflow` é um padrão de ramificação de código-fonte em que um desenvolvedor abre um branch quando começa a trabalhar em um novo recurso. Ela faz todo o trabalho neste branch e integra as mudanças com o resto da equipe quando o recurso é concluído
+`Feature branch workflow` segundo Martin Fowler esse é um padrão de ramificação de código-fonte em que um desenvolvedor abre um branch quando começa a trabalhar em um novo recurso, faz todo o trabalho neste branch e integra as mudanças em um branch (main) quando o recurso é concluído.
 
 # VCS - Version Control System
 Controle de versões diferentes de um documento.
