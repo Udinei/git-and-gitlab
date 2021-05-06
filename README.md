@@ -1,40 +1,44 @@
 # git-and-gitlab 
 <b>[em construção]</b>
-Projeto da [Live Encoding do Osnir Cunha (Inter)](https://www.youtube.com/watch?v=vczVA6pUIpc) que descreve o uso do [feature brach workflow](https://martinfowler.com/bliki/FeatureBranch.html) no GitLab na prática usando o Git no IntelliJ e no terminal, o uso de uma pipeline de CI (integração continua) descrita em arquivo `.yml` para compilar, testar e publicar ao fazer `merge request` com a branch `main` e
-as funcionalidades e comandos mais utilizados durante o uso desse fluxo com o Git e GitLab no dia a dia. 
+Projeto da [Live Encoding do Osnir Cunha (Inter)](https://www.youtube.com/watch?v=vczVA6pUIpc) que descreve o uso do [feature brach workflow](https://martinfowler.com/bliki/FeatureBranch.html) no GitLab na prática usando o Git no IntelliJ e no terminal.
 
 # Stack
-
 - Java 15
 - Spring boot
 - Maven
-- Intellij
+- IDE Intellij
 - Junit
 - Git 
 - GitLab
  
-
+# Assuntos abordados
+- Comandos Git mais utilizados durante o versionamento de um documento usando Git e GitLab no dia a dia. 
+- O uso de uma pipeline de CI (integração continua) descrita em arquivo `.yml` para compilar, testar e publicar ao fazer `merge request` com a branch `main`.
+- Funcionalidades do GitLab no controle de versões
+ 
 # O que é Feature branch workflow
 `Feature branch workflow` segundo [Martin Fowler](https://martinfowler.com/bliki/FeatureBranch.html) esse é um padrão de ramificação de código-fonte em que um desenvolvedor abre um branch quando começa a trabalhar em um novo recurso, faz todo o trabalho neste branch e integra as mudanças em um branch (main) quando o recurso é concluído.
 
-# VCS - Version Control System
+# O que é versionamento
 Controle de versões diferentes de um documento.
+
+### VCS - Version Control System
 - São sistemas Gerenciadores de versões
 - Mantém o registro de modificação do código
 - Quem? O que? Quando? Por que? 
-- Disponibilizar código mais recente
+- Tem o objetivo de manter e disponibilizar código mais recente
 
-# GIT e GitHub
-- DVCS - Distributed Version Control System 
+### GIT e GitHub são DVCS - Distributed Version Control System 
 - Cada cópia do repositório contém o histórico completo de todas as alterações
 - Sistema Distribuido
 - Git Open Source
 - GitHub não é Open Source
-
+- Otimizado para o desempenho
 
 Repositório remoto e repositório local (GitLab segue a mesma ideia)
 
 ![](/git-remote.png)
+
 
 # Feature branch
 ![](/feature-branch.jpg)
@@ -43,7 +47,14 @@ Repositório remoto e repositório local (GitLab segue a mesma ideia)
 # Fluxo de trabalho
 ![](/lifecycle-git.png)
 
-# Comandos GIT
+# Uso do git
+O Git pode ser utilizado através de um terminal Linux, Windows (cmd ou gitbash) ou com uso de uma IDE no nosso caso IntelliJ
+
+### Visualizando Help do Git
+`git --help`
+
+### Criando um repositorio git na área de trabalho
+A área de trabalho é a pasta no seu computador local, que contém o documentos ou arquivos que deseja versionar
 `git init` Cria um repositorio git (pasta .git)
 
 ### Git config
