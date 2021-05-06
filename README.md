@@ -146,54 +146,65 @@ Para visualizar Status do repositório local
 
 ### git commit 
 Para versionar os arquivos novos ou que sofreram alterações 
+
 `git commit -m "digite a msg aqui"`
 
 ### git log
 Para ver os logs dos commit no Git
+
 `git log`
 
 ### Git Alias
-Visualizando configurações do git (atalhos para comandos git)
+Alias são atalhos para comandos git, você pode visualizar essa lista de atablhos usando o comando abaixo:
 
 `git config -l | grep alias`
 
 `git config -l | grep core`
 
-### Git acm (necessário ter criado o alias)
-Esse comando adiciona e faz o comit de uma vez só (Comando não encontrado non config do git)
+O comando `git acm` é um alias que adiciona as alterações e faz o commit em um único comando
+se o comando não for encontrado no config do git, será necessário cria-lo ante de usar como abaixo:
 
 `git acm "msg aqui"`
 
-### Git checkout
-`git checkout` alterna entre versões de código já existentes no sistema local, usa o `hash do commit` para navegar
-entre as versões do código, usuar o comando `git log` para obter o hash do commit
+# Criando Branchs
+### Criando uma novo branch chamada feature1 com a opção `-b` ex:
+`git checkout -b feature1`
+
+
+### Alternando entre commits 
+o comando `git checkout nomeBranch` alterna entre versões de código já commitados no sistema local, usa o `hash do commit` para navegar entre as versões do código, usar o comando `git log` para obter o hash do commit ex: 
+
 `git checkout 135deecb687f4d0fe5dcfc26e3f6c75f3167319e` 
 
-ou cria uma nova branch com a opção `-b` ex:
-`git checkout -b feature1`
+Você pode vsualizar a árvore de commit do git com o comando abaixo:
+
+`git log --graph --oneline --all`
+
+ou de forma mais colorida usando o comando abaixo:
+
+`git log --graph --abbrev-commit --decorate --format=format:'%C(yellow)%h%C(reset)%C(auto)%d%C(reset) %C(normal)%s%C(reset) %C(dim white)%an%C(reset) %C(dim blue)(%ar)%C (reset)' --all`
 
 - [Git checkout](https://www.atlassian.com/br/git/tutorials/using-branches/git-checkout)
 - [Saiba mais lendo esse artigo](https://bluecast.tech/blog/git-switch-branch/)
 
 ### Mudando de branch
+O comando `git switch` troca de branch
+
 `git switch main`
 
-ou troca de branch criando a branch feature2 -c (cria a branch)
+ou cria uma branch feature2 (e já muda para ela)
 
 `git switch -c feature2`
 
-### Visualizando a arvore de commit do git
-`git log --graph --oneline --all`
+ou ainda `git checkout` que também muda de branch
 
-ou
-
-`
-git log --graph --abbrev-commit --decorate --format=format:'%C(yellow)%h%C(reset)%C(auto)%d%C(reset) %C(normal)%s%C(reset) %C(dim white)%an%C(reset) %C(dim blue)(%ar)%C (reset)' --all`
+`git checkout nomeBranch`
 
 # Atualizando branchs
 
 ### git merge
-`merge` da `master` para a `feature2` Atualiza a branch feature2, com os novos commits feitos na branch(main), merge cria um novo commit ("G") na branch feature2
+`merge` da `master` para a `feature2` que vai atualizar a branch feature2, com os novos commits feitos na branch main, 
+o comando `merge` cria um novo commit ("G") na branch feature2
 ![](/merge-feature2.png)
 
 
