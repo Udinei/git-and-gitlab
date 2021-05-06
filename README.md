@@ -9,17 +9,18 @@ as funcionalidades e comandos mais utilizados durante o uso desse fluxo com o Gi
 Controle de versões diferentes de um documento.
 - São sistemas Gerenciadores de versões
 - Mantém o registro de modificação do código
-- Quem? Oque? Quando? Por que? 
+- Quem? O que? Quando? Por que? 
 - Disponibilizar código mais recente
 
-# DVCS - Distributed Version Control System 
-Cada cópia do repositório contém o histórico completo de todas as alterações
-- GIT 
+# GIT e GitHub
+- DVCS - Distributed Version Control System 
+- Cada cópia do repositório contém o histórico completo de todas as alterações
 - Sistema Distribuido
-- Open Source
+- Git Open Source
+- GitHub não é Open Source
 
-# GIT
-Repositório remoto e repositorio local
+
+Repositório remoto e repositório local (GitLab segue a mesma ideia)
 
 ![](/git-remote.png)
 
@@ -31,49 +32,50 @@ Repositório remoto e repositorio local
 ![](/lifecycle-git.png)
 
 # Comandos GIT
-git init - Cria um repositorio git (pasta .git)
-git status - Verificando o status do repositorio
+`git init` Cria um repositorio git (pasta .git)
 
 ### Git config
-Usuario pode ser local ou global - opção --global
+Usuário pode ser local ou global - opção --global
 
 Identificando o usuario no repositorio local
 `git config user.nome "ukaliko"´` 
 `git config user.email "ukaliko@gmail.com"`
 
 # Arquivo .gitignore
-Armazena informações de padrão de arquivos e pastas que não serão versionadas
+Armazena informações de padrão de arquivos e pastas que não serão versionados
 - Formato expressões regulares
 
-### Arquivo no .gitignore
+### Arquivos no .gitignore
 Para evitar que um arquivo continue aparencendo na lista de arquivos versionados mesmo estando no .gitgnore.
 usar `git rm --cached *.log` ou `git update-index --assume-unchanged *.log`
 
-### Status do repositório
-git status
+### Status do repositório Git
+`git status` 
 
-### git commit
-git commit -m "Adiciona o .gitignore com exclusao da target"
+### Versionar as alterações feitas 
+`git commit -m "digite a msg aqui"`
 
-### git log
-git log
+### Ver os logs dos commit no Git
+`git log`
 
-### git config
+### Git config
 Visualizando configurações do git (atalhos para comandos git)
-git config -l | grep alias
-git config -l | grep core
 
-### git acm (verificar alias)
+`git config -l | grep alias`
+
+`git config -l | grep core`
+
+### Git acm (verificar alias)
 Esse comando adiciona e faz o comit de uma vez só (Comando não encontrado non config do git)
-git acm "Adiciona Intellij ao gitignore"
 
-### criando uma nova branch
+`git acm "msg aqui"`
+
+### Criando uma nova branch
 Cria a branch e a seta como a default
-git checkout -b feature1
+`git checkout -b feature1`
 
-### git switch
-Alternando emtre branch
-git switch main
+### Mudando de branch
+`git switch main`
 
 Troca de branch criando a branch feature2 -c (cria a branch)
 git switch -c feature2
@@ -173,8 +175,8 @@ Traz o conteúdo da `main` para a branch `feature2`
 - Mantém a estrura de commit limpa, usar sempre se ainda não fez nenhum commit para o main `rebase master > feature`
 
 # Referências
-[Live conding Osnir Cunha da Inter](https://www.youtube.com/watch?v=vczVA6pUIpc)
-[PDF com os comando do Git](https://about.gitlab.com/images/press/git-cheat-sheet.pdf)
-[Comparando Workflows Git](https://www.atlassian.com/git/tutorials/comparing-workflows)
-[feature brach workflow](https://docs.gitlab.com/ee/gitlab-basics/feature_branch_workflow.html)
+- [Live conding Osnir Cunha da Inter](https://www.youtube.com/watch?v=vczVA6pUIpc)
+- [PDF com os comando do Git](https://about.gitlab.com/images/press/git-cheat-sheet.pdf)
+- [Comparando Workflows Git](https://www.atlassian.com/git/tutorials/comparing-workflows)
+- [feature brach workflow](https://docs.gitlab.com/ee/gitlab-basics/feature_branch_workflow.html)
 
