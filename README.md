@@ -61,8 +61,14 @@ O Git pode ser utilizado através de um terminal Linux, Windows (cmd ou gitbash)
 
 ### Criando um repositorio git na área de trabalho
 A área de trabalho é a pasta no seu computador local, que contém o documentos ou arquivos que deseja versionar
-O comando abaixo cria o repositorio .git (uma pasta oculta), onde o Git armazena seus metadados de controle
+O comando abaixo cria o repositorio `.git` (uma pasta oculta), onde o Git armazena seus metadados de controle.
+
 `git init` 
+
+Comando para ver arquivos ocultos no windows:
+No `cmd` na pasta onde esta o arquivo digite: `attrib *.*`
+
+No terminal linux digite: `ls -a`
 
 ### Git config
 Criando usuário do Git (pode ser local ou global --global)
@@ -125,18 +131,25 @@ log/
 target/
 ~~~
 
+As vezes alguns arquivos já informados no .gitignore insistem em ser versionados, para forçar que esses arquivos não sejam versionados execute o comando abaixo (exemplo arquivos de log):
 
-### Arquivos no .gitignore
-Para evitar que um arquivo continue aparencendo na lista de arquivos versionados mesmo estando no .gitgnore.
-usar `git rm --cached *.log` ou `git update-index --assume-unchanged *.log`
+`git rm --cached *.log` 
 
-### Visualizando Status do repositório local
+e
+
+`git update-index --assume-unchanged *.log`
+
+### git Status
+Para visualizar Status do repositório local
+
 `git status` 
 
-### Versionar as alterações feitas 
+### git commit 
+Para versionar os arquivos novos ou que sofreram alterações 
 `git commit -m "digite a msg aqui"`
 
-### Ver os logs dos commit no Git
+### git log
+Para ver os logs dos commit no Git
 `git log`
 
 ### Git Alias
