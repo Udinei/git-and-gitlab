@@ -37,7 +37,7 @@ Controle de versões diferentes de um documento.
 
 Repositório remoto e repositório local (GitLab segue a mesma ideia)
 
-![](images/fluxo-basic-git.png)
+![](/fluxo-basic-git.png)
 
 
 # Feature branch
