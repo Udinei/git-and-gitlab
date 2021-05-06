@@ -173,7 +173,8 @@ Traz o conteúdo da `main` para a branch `feature2`
 - Mantém a estrura de commit limpa, usar sempre se ainda não fez nenhum commit para o main `rebase master > feature`
 
 # Referências
+[Live conding Osnir Cunha da Inter](https://www.youtube.com/watch?v=vczVA6pUIpc)
 [PDF com os comando do Git](https://about.gitlab.com/images/press/git-cheat-sheet.pdf)
-[Comparando Workflows Git]https://www.atlassian.com/git/tutorials/comparing-workflows
+[Comparando Workflows Git](https://www.atlassian.com/git/tutorials/comparing-workflows)
 [feature brach workflow](https://docs.gitlab.com/ee/gitlab-basics/feature_branch_workflow.html)
 
