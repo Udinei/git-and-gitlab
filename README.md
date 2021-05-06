@@ -44,7 +44,7 @@ Repositório remoto e repositório local (GitLab segue a mesma ideia)
 # Feature branch
 O Git segue o conceito de branch sendo o branch(ramos, ramificações) `main` o branch principal do repositório, onde todo o código feitos em outras branch é juntado, formando assim um só código (no caso do software).
 
-![](/images/git-branchs.png)
+![](/images/git-branchs1.png)
 
 
 # Fluxo de trabalho local do Git
