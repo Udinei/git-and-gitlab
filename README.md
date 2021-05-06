@@ -360,7 +360,7 @@ artifact-publish:
 ~~~
 
 # Referências
-- [Live conding Osnir Cunha](https://www.youtube.com/watch?v=vczVA6pUIpc)
+- [Live encoding Osnir Cunha](https://www.youtube.com/watch?v=vczVA6pUIpc)
 - [Linkdin Osnir Cunha](https://linkdin.com/in/osnircunha)
 - [PDF com os comando do Git](https://about.gitlab.com/images/press/git-cheat-sheet.pdf)
 - [Comparando Workflows Git](https://www.atlassian.com/git/tutorials/comparing-workflows)
