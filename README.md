@@ -75,11 +75,16 @@ git log --graph --oneline --all
 ou
 git log --graph --abbrev-commit --decorate --format=format:'%C(yellow)%h%C(reset)%C(auto)%d%C(reset) %C(normal)%s%C(reset) %C(dim white)%an%C(reset) %C(dim blue)(%ar)%C (reset)' --all
 
-# Atualizando branch
+# Atualizando branchs
+
 ### git merge
-Atualizando a branch feature2, com os novos comits feitos na master(main)
-cria um novo commit na branch
-merge - main > feature2
+`merge` da `master` para a `feature2` Atualiza a branch feature2, com os novos commits feitos na branch(main), merge cria um novo commit ("G") na branch feature2
+![](/merge-feature2.png)
+
+
+### git rebase
+`rebase` da `master` para a `feature1` Atualiza a branch feature1, com os novos commits feitos na branch(main), refazendo a linha base ou seja reescrevendo a árvore de commits da `master` para `feature1` que agora fica de forma linear e limpa.
+![](/rebase-feature1.png)
 
 # GitLab
 - Gerenciamento de repósitorios
@@ -146,23 +151,21 @@ clicar na aba `Local change do Git` com o botão direito e selecionar `Commit Fi
 Na aba Git clicar no commit e selecionar a opção `Undo commit...`
 
 ### Merge Request 
+Solicitação feita pelo desenvolvedor, no gitLab ao um responsável pela organização e distribuição do código, onde o mesmo
+vai rodar pode rodar pipeline de testes, deploy e build. 
 
 
+### Mudar de branch
+`git checkout feature2`
 
-
-
-### Mudar para a branch feature2
-git checkout feature2
-
-git merge master(main)
-
-Traz o conteudo da main para a branch feature2
+Traz o conteúdo da `main` para a branch `feature2`
 
 ### git Rebase 
-Reescreve a arvore de commit da branch features, movendo a ligação para o ultimo commit da main
-Mantem a estrura de commit limpa, usar sempre se ainda não fez nenhum commit para o main
-rebase master > feature
+- Reescreve a arvore de commit da branch features, movendo a ligação para o ultimo commit da main
+- Mantém a estrura de commit limpa, usar sempre se ainda não fez nenhum commit para o main `rebase master > feature`
 
-
+# Referências
+[PDF com os comando do Git](https://about.gitlab.com/images/press/git-cheat-sheet.pdf)
+[Comparando Workflows Git]https://www.atlassian.com/git/tutorials/comparing-workflows
 
 
