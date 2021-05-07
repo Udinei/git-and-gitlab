@@ -303,9 +303,9 @@ vai rodar pode rodar pipeline de testes, deploy e build.
 Para agrupar commits utilizar o comando `squash`
 
 ### Usando arquivos .yml para fazer pipeline no GitLab
-Arquivos .YAML usa um padrão de dados hierárquicos, que pode ser usado em conjunto com qualquer linguagens de programação, e é usualmente utilizado para armazenar arquivos de configuração. Nesse caso o conteúdo do arquivo .gitlab-ci.yml abaixo, é lido automaticamente pelo GitLab e executa os comandos nele contido, que é uma sequencia de comandos para compilar, testar e construir toda a aplicação assim que form feito um commit para o repositorio local:
+Arquivos .YAML usa um padrão de dados hierárquicos, que pode ser usado em conjunto com qualquer linguagens de programação, e é usualmente utilizado para armazenar arquivos de configuração. Nesse caso o conteúdo do arquivo .gitlab-ci.yml abaixo, é lido automaticamente pelo GitLab que executa os comandos nele contido, que é uma sequencia de comandos para compilar, testar e construir toda a aplicação assim que for feito um `Merge Request` com a branch `main`.
 
-conteúdo do arquivo `.gitlab-ci.yml`
+Abaixo o conteúdo do arquivo `.gitlab-ci.yml`
 ~~~
 # Esse arquivo adiciona as configurações de pipeline para o CI (Continuos Integrations)
 # passagem de parametros para as Variaveis do Maven
